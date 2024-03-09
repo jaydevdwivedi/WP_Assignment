@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 10 - Table</title>
+    <style>
+      .table {
+        /* border: 3px solid black; */
+        width: 50%;
+      }
+
+      .row {
+        height: 60px;
+        width: 100%;
+      }
+      .col {
+        width: calc(100%/3 - 1%);
+        height: 100%;
+        display: inline-block;
+        margin: 0;
+        color: white;
+        font-size: 2em;
+        padding-left: 5px;
+        padding-top: 5px;
+        line-height: 100%;
+        font-weight: 500;
+      }
+      .row:nth-child(odd) {
+        background-color: yellow;
+      }
+      .row:nth-child(odd) .col {
+        color: black;
+      }
+      .row:nth-child(even) {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <div class="row">
+        <div class="col">Cell 1</div>
+        <div class="col">Cell 2</div>
+        <div class="col">Cell 3</div>
+      </div>
+      <div class="row">
+        <div class="col">Cell 4</div>
+        <div class="col">Cell 5</div>
+        <div class="col">Cell 6</div>
+      </div>
+      <div class="row">
+        <div class="col">Cell 7</div>
+        <div class="col">Cell 8</div>
+        <div class="col">Cell 9</div>
+      </div>
+      <div class="row">
+        <div class="col">Cell 10</div>
+        <div class="col">Cell 11</div>
+        <div class="col">Cell 12</div>
+      </div>
+      <div class="row">
+        <div class="col">Cell 13</div>
+        <div class="col">Cell 14</div>
+        <div class="col">Cell 15</div>
+      </div>
+    </div>
+  </body>
+</html>
