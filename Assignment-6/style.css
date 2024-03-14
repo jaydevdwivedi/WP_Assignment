@@ -1,83 +1,142 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
-nav {
-    width: 100%;
+body {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'heading'
+        'text-cta'
+        'services'
+        'gallery'
+        'footer'
+        'copyright'
+    ;
+    background-color: black;
+}
+
+/* Utility Casses */
+.flex {
     display: flex;
-    background-color: violet;
+}
+
+.justify-content-between {
+    justify-content: space-between;
 }
 
 li {
-    list-style: none;
-    padding: 10px;
+    list-style-type: none;
 }
 
-ul {
-    display: inline-flex;
-    /* padding: 10px; */
+
+nav {
+    padding: 1em;
 }
 
-li > a {
-    color: black;
-    text-decoration: none;
+.social-icon {
+    padding: 0.5em;
+    height: 1.2em;
+    width: 1.2em;
+    fill: white;
 }
 
-.social-icons-ul {
-    position: absolute;
-    right: 0;
+/* Header tag */
+#header {
+    /* background-color: red; */
+    grid-area: header;
+    height: 200px;
+    width: 100%;
 }
 
-.social-icons-li {
-    padding: 20px;
+/* Nav for Contact and social icons */
+#contact-links-li {
+    padding: 0.5em;
 }
 
-.social-icons-li > img {
-    height: 20px;
-    width: 20px;
+#contact-links-li>svg {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    height: 1em;
+    width: 1em;
+    fill: white;
 }
 
-.nav-links-ul {
-    position: absolute;
-    right: 0;
+#social-icons {
+    margin-right: 1em;
 }
+
+/* nav for logo and nav links */
+#navbar {
+    /* background-color: red; */
+}
+
+#logo {
+    padding: 0.5em 1.2em;
+}
+
+#logo>svg {
+    height: 2em;
+    width: auto;
+    fill: white;
+}
+
 .nav-links {
-    padding: 23px;
+    padding: 0.5em 1.4em;
 }
 
 #heading {
-    height: 20vh;
+    grid-area: heading;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: blue; */
+    background-image: url('../Images/Broken-Cube.png');
+    height: 110vh;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-#text-cta-btn {
-    height: 10vh;
-    width: 100%;
-    background-color: rgb(125, 146, 160);
+#heading > h1 {
+    font-size: 2em
+}
+
+
+#heading-cta-btn {
+    background-color: blue;
+    border: 0;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    font-size: 1.3em;
+}
+
+#text-cta {
+    grid-area: text-cta;
+    background-color: red;
 }
 
 #services {
-    height: 30vh;
-    width: 100%;
-    background-color: black;
-    color: white;
+    grid-area: services;
+    background-color: blue;
 }
 
 #gallery {
-    background-color: rgb(125, 146, 160);
-    height: 40vh;
-    width: 100%;
+    grid-area: gallery;
+    background-color: red;
 }
 
-#contact-us {
-    background-color: black;
-    color: white;
+#footer {
+    grid-area: footer;
+    background-color: blue;
 }
 
 #copyright {
-    background-color: rgb(125, 146, 160);
-    
+    grid-area: copyright;
+    background-color: red;
 }
