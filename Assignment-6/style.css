@@ -1,7 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    /* color: white; */
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
         'footer'
         'copyright'
     ;
-    background-color: black;
+    /* background-color: black; */
 }
 
 /* Utility Casses */
@@ -27,116 +30,290 @@ body {
     justify-content: space-between;
 }
 
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 li {
     list-style-type: none;
 }
 
-
 nav {
-    padding: 1em;
-}
-
-.social-icon {
-    padding: 0.5em;
-    height: 1.2em;
-    width: 1.2em;
-    fill: white;
+    padding: 0.5em 1em;
 }
 
 /* Header tag */
 #header {
-    /* background-color: red; */
     grid-area: header;
-    height: 200px;
     width: 100%;
+    position: sticky;
+    top: -2.9em;
+    z-index: 20;
 }
 
 /* Nav for Contact and social icons */
+#contact-links {
+    background-color: black;
+}
+
+#contact-links-ul {
+    margin-left: 10px;
+}
+
 #contact-links-li {
-    padding: 0.5em;
+    padding: 0.3em 0.5em;
+    color: white;
 }
 
 #contact-links-li>svg {
     position: relative;
     top: 3px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     height: 1em;
     width: 1em;
     fill: white;
+    transform: rotate(12deg);
 }
 
 #social-icons {
     margin-right: 1em;
 }
 
+.social-icon {
+    padding: 0.3em 0.5em;
+    height: 1.2em;
+    width: 1.2em;
+    fill: white;
+}
+
 /* nav for logo and nav links */
 #navbar {
-    /* background-color: red; */
+    background-color: rgba(255, 255, 255, 0.377);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 #logo {
     padding: 0.5em 1.2em;
+    /* background-color: blueviolet; */
 }
 
-#logo>svg {
-    height: 2em;
-    width: auto;
-    fill: white;
+#logo>h1 {
+    font-size: 2em;
+}
+
+#nav-tabs>ul {
+    /* background-color: blue; */
+    height: 100%;
 }
 
 .nav-links {
+    /* background-color: aliceblue; */
     padding: 0.5em 1.4em;
+    line-height: 100%;
+}
+
+.nav-links>a {
+    color: black;
+}
+
+.nav-links>a:link:target {
+    font-weight: bold;
+    color: chocolate;
 }
 
 #heading {
     grid-area: heading;
+    position: relative;
+    top: -4em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     /* background-color: blue; */
-    background-image: url('../Images/Broken-Cube.png');
-    height: 110vh;
-    width: 100%;
+    background-image: url('../Images/background-image.png');
+    height: 100vh;
+    width: auto;
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-#heading > h1 {
-    font-size: 2em
+#heading>h2 {
+    font-size: 3em;
+    margin: 10px;
+    position: relative;
+    top: -10px;
 }
 
+#heading>h3 {
+    font-size: 1.8em;
+    margin: 5px;
+}
 
 #heading-cta-btn {
-    background-color: blue;
+    color: mintcream;
+    background-color: crimson;
     border: 0;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 0.5em 1em;
+    padding-top: 0.7em;
     font-size: 1.3em;
+    margin: 20px;
 }
 
 #text-cta {
     grid-area: text-cta;
-    background-color: red;
+    background:linear-gradient(rgba(143, 46, 1, 0.868), rgb(143, 46, 1) 60%, rgba(143, 46, 1, 0.826));
+    /* height: 30vh; */
+    padding: 5em;
+
 }
 
+#text-cta>span {
+    color: white;
+    font-size: 1.4em;
+    margin: 1em;
+    word-spacing: 0.5em;
+}
+
+#text-cta>button {
+    font-size: 1em;
+    background-color: chocolate;
+    border: 0;
+    padding: 0.6em 1em;
+    padding-top: 0.8em;
+    border-radius: 10px;
+}
+
+#text-cta>button>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Services section */
 #services {
     grid-area: services;
-    background-color: blue;
+    /* background-color: blue; */
+    flex-direction: column;
+    margin-bottom: 5em;
 }
 
+#services>h2 {
+    font-size: 2em;
+    text-decoration: underline;
+    margin: 2em;
+}
+
+#services>div {
+    justify-content: space-around;
+    align-items: center;
+    margin: 3em;
+}
+
+#services>div>div>img {
+    height: 200px;
+    width: auto;
+    margin: 0.5em 1em;
+    /* border: 3px solid red; */
+}
+
+#services>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#services>div>div>span {
+    font-size: 1.4em;
+}
+
+/* Gallery Section */
 #gallery {
     grid-area: gallery;
-    background-color: red;
+    /* background-color: red; */
+    flex-direction: column;
 }
 
+#gallery>h2 {
+    font-size: 2em;
+    text-decoration: underline;
+    margin: 2em;
+}
+
+#gallery>div {
+    position: relative;
+    margin: 5em;
+    margin-bottom: 8em;
+}
+
+#gallery>div>img {
+    position: relative;
+    width: auto;
+    border-radius: 8px;
+}
+
+#img1 {
+    height: 21em;
+    right: -4em;
+    /* z-index:0; */
+}
+
+#img2 {
+    height: 27em;
+    z-index: 10;
+}
+
+#img3 {
+    height: 21em;
+    left: -4em;
+}
+
+/* Footer Section */
 #footer {
     grid-area: footer;
-    background-color: blue;
+    background-color: black;
+    padding: 5em;
 }
 
+.footer-cols {
+    width: calc(100%/3);
+    /* height: 300px; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-cols>ul>li {
+    padding: 0.4em 1em;
+}
+
+.footer-cols>ul>li>a {
+    color: white;
+}
+
+.footer-cols>ul>li>a:visited {
+    color: white;
+}
+
+/* Copyright  Section*/
 #copyright {
     grid-area: copyright;
-    background-color: red;
+    color: rgb(157, 155, 155);
+    background-color: rgb(72, 71, 71);
+    font-size: 0.8em;
+    text-align: right;
+    padding: 0.5em;
 }
