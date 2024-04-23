@@ -26,13 +26,14 @@
 
           console.log("Birth Month: ", birthMonth);
           console.log("Birth Date: ", birthDate);
-          let totalDays = parseInt(birthDate) + parseInt(daysInMonth[currentMonth] - currentDate + 28);
-
-          for (let i = currentMonth+1; i < birthMonth; i++) {
+          let totalDays = parseInt(birthDate) + parseInt((daysInMonth[currentMonth] + 28) - currentDate);
+          console.log("total days before calculation: ", (daysInMonth[currentMonth] + 28) - currentDate);
+          for (let i = currentMonth+1; i < birthMonth-1; i++) {
             totalDays += daysInMonth[i] + 28;
           }
 
-          result.innerHTML = `Days remaining to your birthday is(are) ${totalDays}`;
+          result.innerHTML = `Days remaining to your birthday is(are) ${(birthMonth==currentMonth)?totalDays%30:totalDays}`;
+          // result.innerHTML = `Days remaining to your birthday is(are) ${totalDays}`;
         }
     </script>
   </body>

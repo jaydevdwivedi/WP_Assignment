@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q7 | CSS Pseudo class and elements</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo Class & Pseudo Elements</title>
+    <style>
+      /* Styling regular elements */
+      p {
+          margin: 0;
+          padding: 10px;
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+      }
+
+      /* Styling the first paragraph using :first-child pseudo-class */
+      p:first-child {
+          background-color: #ffcccc;
+      }
+
+      /* Styling the last paragraph using :last-child pseudo-class */
+      p:last-child {
+          background-color: #ccffcc;
+      }
+
+      /* Styling paragraphs on even positions using :nth-child() pseudo-class */
+      p:nth-child(even) {
+          background-color: #ccccff;
+      }
+
+      /* Styling paragraphs on odd positions using :nth-child() pseudo-class */
+      p:nth-child(odd) {
+          background-color: #ffffcc;
+      }
+
+      /* Styling the first letter of paragraphs using ::first-letter pseudo-element */
+      p::first-letter {
+          font-size: 150%;
+          color: #ff0000;
+      }
+
+      /* Styling the first line of paragraphs using ::first-line pseudo-element */
+      p::first-line {
+          font-weight: bold;
+      }
+
+      /* Styling links when hovered using :hover pseudo-class */
+      a:hover {
+          color: #ff6600;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+      vehicula porta arcu, vel scelerisque dui consequat id.
+    </p>
+
+    <p>
+      Nullam hendrerit elit eget lacus vehicula, sit amet fermentum ex
+      convallis. Donec vitae nisi quis purus ullamcorper consequat.
+    </p>
+
+    <p>
+      Suspendisse potenti. Duis sed convallis mi. Proin vel nunc eget risus
+      dapibus suscipit.
+    </p>
+
+    <p>
+      Quisque tincidunt orci nec libero bibendum interdum. Duis quis quam vitae
+      lacus aliquet maximus.
+    </p>
+
+    <p><a href="#">Hover over this link</a> to see the color change.</p>
+  </body>
 </html>
