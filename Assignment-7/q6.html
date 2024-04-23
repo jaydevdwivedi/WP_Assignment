@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+    <h1>This is a Title</h1>
+    <button id="findTime" onclick="showTime()">Find Time</button>
+    <button onclick="changeBackground()">Red</button>
+    <div></div>
+    <script>
+        let heading = document.getElementsByTagName('h1')[0];
+        let button = document.getElementsByTagName('button')[1];
+
+        heading.addEventListener('mouseover', function(){
+            heading.style.backgroundColor = "yellow";
+        });
+        heading.addEventListener('mouseout', function(){
+            heading.style.backgroundColor = "black";
+        });
+
+        function showTime(){
+            let findTime = document.getElementById('findTime');
+            let div = document.getElementsByTagName('div')[0];
+            let date = new Date();
+
+            div.innerHTML = date;
+        }
+
+        function changeBackground(){
+            if(button.innerText == 'Red'){
+                document.body.style.backgroundColor = 'red';
+                button.innerText = 'Green';
+            }
+            else if(button.innerText == 'Green'){
+                document.body.style.backgroundColor = 'green';
+                button.innerText = 'Red';
+            }
+        }
+    </script>
+</body>
+</html>

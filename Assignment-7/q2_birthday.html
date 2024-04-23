@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate days till birthday</title>
+  </head>
+  <body>
+    <input type="date" id="birthday" />
+    <input type="submit" value="Go!" onclick="showDate()" />
+    <div id="result"></div>
+    <script>
+      let birthDayInput = document.getElementById('birthday');
+      let result = document.getElementById('result');
+      let currentDay = new Date();
+      let currentMonth = currentDay.getMonth();
+      let currentDate = currentDay.getDate();
+      console.log("Current Month: ", currentMonth);
+      console.log("Current Date", currentDate);
+
+      function showDate() {
+          let birthDay =  new Date(birthDayInput.value);
+          let birthMonth = birthDay.getMonth();
+          let birthDate = birthDay.getDate();
+          let daysInMonth = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3];
+
+          console.log("Birth Month: ", birthMonth);
+          console.log("Birth Date: ", birthDate);
+          let totalDays = parseInt(birthDate) + parseInt((daysInMonth[currentMonth] + 28) - currentDate);
+          console.log("total days before calculation: ", (daysInMonth[currentMonth] + 28) - currentDate);
+          for (let i = currentMonth+1; i < birthMonth-1; i++) {
+            totalDays += daysInMonth[i] + 28;
+          }
+
+          result.innerHTML = `Days remaining to your birthday is(are) ${(birthMonth==currentMonth)?totalDays%30:totalDays}`;
+          // result.innerHTML = `Days remaining to your birthday is(are) ${totalDays}`;
+        }
+    </script>
+  </body>
+</html>
