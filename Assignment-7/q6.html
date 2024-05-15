@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 6</title>
+    <style>
+        h1 {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <h1>This is a Title</h1>
+    <br>
     <button id="findTime" onclick="showTime()">Find Time</button>
     <button onclick="changeBackground()">Red</button>
     <div></div>
@@ -15,10 +23,13 @@
         let button = document.getElementsByTagName('button')[1];
 
         heading.addEventListener('mouseover', function(){
-            heading.style.backgroundColor = "yellow";
+            heading.style.backgroundColor = "rgba(255, 255, 0, .500)";
+            heading.style.color = "black";
         });
         heading.addEventListener('mouseout', function(){
-            heading.style.backgroundColor = "black";
+            heading.style.backgroundColor = "rgba(0, 0, 0, .500)";
+            heading.style.color = "white";
+
         });
 
         function showTime(){
